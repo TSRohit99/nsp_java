@@ -88,9 +88,9 @@ public class studentResult extends JFrame implements ActionListener {
 
         // Create a map to store user information
         Map<String, List<Double>> userData = new LinkedHashMap<>();
-        userData.put("Data Struture", createList(doc.getDouble("ds"), doc.getDouble("ds_c")));
-        userData.put("Data Struture Lab", createList(doc.getDouble("dsLab"), doc.getDouble("dsLab_c")));
-        userData.put("Physices", createList(doc.getDouble("physices"), doc.getDouble("physices_c")));
+        userData.put("Data Structure", createList(doc.getDouble("ds"), doc.getDouble("ds_c")));
+        userData.put("Data Structure Lab", createList(doc.getDouble("dsLab"), doc.getDouble("dsLab_c")));
+        userData.put("Physics", createList(doc.getDouble("physices"), doc.getDouble("physices_c")));
         userData.put("Math", createList(doc.getDouble("math"), doc.getDouble("math_c")));
         userData.put("DLD", createList(doc.getDouble("dld"), doc.getDouble("dld_c")));
         userData.put("DLD lab", createList(doc.getDouble("dldLab"), doc.getDouble("dldLab_c")));

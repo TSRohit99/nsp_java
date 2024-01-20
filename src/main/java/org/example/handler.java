@@ -19,7 +19,9 @@ public class handler {
 
     public static Document connectDB(CED obj, String id, int order) {
 
-        String connectionString = "mongodb+srv://neubportaladmin:zFhrWIVpxaFEeDF3@cluster0.lrgci3m.mongodb.net/?retryWrites=true&w=majority";
+        String username = System.getenv("MONGO_DB_USERNAME");
+        String password = System.getenv("MONGO_DB_PASSWORD");
+        String connectionString = "mongodb+srv://"+username+":"+password+"@cluster0.lrgci3m.mongodb.net/?retryWrites=true&w=majority";
 
         ServerApi serverApi = ServerApi.builder()
                 .version(ServerApiVersion.V1)
@@ -133,7 +135,7 @@ public class handler {
                 JOptionPane.showMessageDialog(null, "No data found! Submit the correct ID");
                 new neubInfoPortal();
             }
-            System.out.println("Executed 1");
+            System.out.println("Executed getUserDataByID()");
 
         }
 
@@ -141,6 +143,7 @@ public class handler {
 
         System.out.println(id);
         connectDB(null, id, 2);
+        System.out.println("Executed delUserData()");
 
 
     }
@@ -149,7 +152,7 @@ public class handler {
 
             connectDB(obj, obj.sID.getText(), 3);
 
-            System.out.println("Executed 3");
+            System.out.println("Executed addUserData()");
 
         }
 
@@ -158,7 +161,9 @@ public class handler {
         connectDB(obj, obj.sID.getText(), 4);
         System.out.println(obj.sID.getText());
 
-        System.out.println("Executed 4");
+        System.out.println("Executed updateUserData()");
+        JOptionPane.showMessageDialog(null, "Data is updated successfully!");
+
 
     }
 
@@ -171,15 +176,9 @@ public class handler {
 
         }
         new  studentResult(doc);
-        System.out.println("Executed 5");
+        System.out.println("Executed getResult()");
 
     }
-
-
-
-
-
-
 
 
 }

@@ -13,7 +13,7 @@ public class CED extends JFrame implements ActionListener{
     //<<<<<<<<<<<< CED HOMEPAGE >>>>>>>>>>>
 
     CED(){
-        setTitle("Add/Delete Student Information");
+        setTitle("Add/Delete/Edit Student Information");
         setSize(650,500);
         setLocationRelativeTo(null);
         setResizable(false);
@@ -22,12 +22,12 @@ public class CED extends JFrame implements ActionListener{
 
         //Frame decor
         getContentPane().setBackground(Color.gray);
-        header = new JLabel("Add/Delete Student Information", JLabel.CENTER);
+        header = new JLabel("Add/Delete/Edit Student Information", JLabel.CENTER);
         header.setSize(650,50);
         header.setOpaque(true);
         header.setBackground(Color.gray);
         header.setForeground(Color.black);
-        Font font = new Font("Courier New", Font.BOLD, 30);
+        Font font = new Font("Courier New", Font.BOLD, 27);
         header.setFont(font);
         add(header);
 
