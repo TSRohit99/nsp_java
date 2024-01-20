@@ -139,7 +139,7 @@ public class handler {
 
         }
 
-    public static void delUserData (String id){
+        public static void delUserData (String id){
 
         System.out.println(id);
         connectDB(null, id, 2);
@@ -156,7 +156,7 @@ public class handler {
 
         }
 
-    public static void updateUserData (CED obj){
+        public static void updateUserData (CED obj){
 
         connectDB(obj, obj.sID.getText(), 4);
         System.out.println(obj.sID.getText());
@@ -167,7 +167,7 @@ public class handler {
 
     }
 
-    public static void getResult (String id){
+        public static void getResult (String id){
 
         System.out.println(id);
         Document doc = connectDB(null, id, 5);
